@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acion</title>
+    <meta http-equiv="refresh" content="{{ refresh_interval }}">
+    
+</head>
+<body>
+    <h1 style="text-align: center;">Github Action Events</h1>
+    <div id="events" style="width: 90%;height: 90%;border: 3px solid rosybrown;text-align: center; margin: 40px;color: blueviolet;">
+        <!-- Render events dynamically -->
+        {% for event in events %}
+            <p><b>  {{ event.push }}</b></p>
+            <p><b>  {{ event.pull_request }}</b></p>
+            <p><b>  {{ event.merge }}</b></p>
+        {% endfor %}
+    </div>
+</body>
+</html>
